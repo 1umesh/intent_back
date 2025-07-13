@@ -19,7 +19,7 @@ app.add_middleware(
 templates = Jinja2Templates(directory="templates")
 
 # Load model
-model = joblib.load("/Users/umeshmeena/python_projects/lead_intent/conversion_pipeline.pkl")
+model = joblib.load("conversion_pipeline.pkl")
 
 @app.get("/", response_class=HTMLResponse)
 async def read_form(request: Request):
